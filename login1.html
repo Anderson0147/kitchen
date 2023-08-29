@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+form{
+margin-top: 50px;
+width: 600px;
+height: 500px;
+text-align: center;
+border-radius: 15px;
+ border: solid yellow;
+margin-left: 400px;
+margin-top: 50px;
+}
+
+input{
+
+color: black;
+width: 300px;
+height: 30px;
+margin-left: auto;
+border-radius: 10px;
+margin-top: 20px;
+}
+
+marquee{
+color:black;
+display: flow-root;
+font-size: x-large;
+}
+
+button{
+
+    color: black;
+    transition: 3s;
+    font-size: large;
+    margin-top: 20px;
+}
+
+body{
+    background-color:yellow;
+    color: black;
+}
+        
+</style>
+<body>
+    <nav>
+        <ul>
+
+            <li><a href="index.html">Home</li>
+            <li>About us</li>
+            <li>Contact us</li>
+            <li><a href="signup.html"></a>Signup</li>
+        </ul>
+    </nav>
+    <h1> Customer's registration page</h1>
+    <marquee> WELCOME TO 2ND WIFE KITCHEN </marquee>
+    <form action="login.php" method="post" >
+<label>First name</label>
+<input type="text" placeholder="First name" id="fname" name="fname"><br>
+<label>Last name</label>
+<input type="text" placeholder="last name" id="lname" name="lname"><br>
+<label>Phone number</label>
+<input type="number" placeholder="Enter phone number" id="Phone" name="phone"><br>
+<label>Email address</label>
+<input type="text" placeholder="Enter email address" id="mail" name="mail"><br>
+<label>Password</label>
+<input type="password" placeholder="Enter password" id="pword" name="rpass"><br>
+<label>Confirm password</label>
+<input type="password" placeholder="confirm password" id="cpword" name="cpass"><br>
+<button>Submit</button>
+
+
+
+
+    </form>
+</body>
+</html>

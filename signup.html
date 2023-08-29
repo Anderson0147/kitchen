@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+    margin: 00;
+    padding: 00;
+}
+#header{
+    width: 100%;
+    height: 40px;
+    background-color:yellow;
+    gap: 8px;
+
+
+}
+nav{
+    display: flex;
+    
+}
+#home{
+    display: flex;
+    gap: 15px;
+    margin-left: 15px;
+    
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+#sig{
+    display: flex;
+    gap:70px;
+    margin-left: 900px;
+}
+        form{
+            margin-top: 50px;
+            width: 600px;
+            height: 500px;
+            text-align: center;
+            border-radius: 15px;
+            border: solid yellow;
+        margin-left: 400px;
+            
+            margin-top: 50px;
+        
+        }
+        
+        .form-control{
+            width: 400px;
+            height: 40px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        button{
+            margin-top: 30px;
+            width: 300px;
+            height: 40px;
+            background-color:yellow;
+            font-size: large;
+        }
+        button:hover{
+            
+            width: 250px;
+            height: 30px;
+            background-color:yellow;
+            border-radius: 30px;
+            font-size: large;
+            transition: 5s;
+        } 
+        
+        marquee{
+            color: black;
+            font-size: large;
+        } 
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <ul id="home">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="order.html">order</a></li>
+                
+            </ul>
+            <ul id="sig">
+                <li><a href="menu.html">Sign Up</a></li>
+                <li><a href="login1.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        </div>
+        <div>
+            <form action="reg.php" method="post">
+                  <h1>STAFF FORM</h1>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Full name" name="fname" id="fname">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-user"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email" name="mail" id="mail">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="phone number" name="phone" id="phone">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-user"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Password" name="pass" id="pass">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="rpass" id="rpass">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick =" return chk()">submit</button>
+                       </form>
+        </div>  
+        <div id="footer">
+            <marquee>
+                <h2>WELCOME TO 2ND WIFE KITCHEN</h2>
+            </marquee>
+            
+        </div>
+        <script>
+    function chk(){
+        var fn = document.getElementById('fname').value;
+        var em = document.getElementById('mail').value;
+        var pn = document.getElementById('phone').value;
+        var pw = document.getElementById('pass').value;
+        var cpw = document.getElementById('rpass').value;
+
+        if(fn == ""){
+            alert("Name required");
+            return false;
+        }
+        if(em == "" ){
+            alert("Email required");
+            return false;
+        }
+        if(pn== "" ){
+            alert("phone number required");
+            return false;
+        }
+        if(pw !="" && cpw !=""){
+            if(pw != cpw){
+                alert("password do not match!");
+                return false;
+            }
+            if(pw .length <8){
+              alert("password too small");
+                return false;
+            }
+        }
+
+        
+    }
+    </script>
+    </body>
+</html>
